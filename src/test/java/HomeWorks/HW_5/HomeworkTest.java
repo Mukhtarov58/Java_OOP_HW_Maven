@@ -1,6 +1,8 @@
 package HomeWorks.HW_5;
 
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -13,6 +15,8 @@ import static org.junit.jupiter.api.Assertions.*;
 class HomeworkTest {
 
     @Test
+    @Order(1)
+    @DisplayName("Проверяет работу contains")
     void containsTest() {
         List<String> list = Arrays.asList("a", "b", "c");
 
@@ -22,6 +26,8 @@ class HomeworkTest {
     }
 
     @Test
+    @Order(2)
+    @DisplayName("Проверяет работу hasExactly")
     void hasExactlyTest() {
         List<String> values1 = Arrays.asList("a");
         List<String> values2 = Arrays.asList("a", "b");
@@ -32,6 +38,8 @@ class HomeworkTest {
     }
 
     @Test
+    @Order(3)
+    @DisplayName("Проверяет работу unique")
     void uniqueTest() {
         List<String> list1 = Arrays.asList("a", "b", "c");
         List<String> list2 = Arrays.asList("a", "b", "c", "b");
